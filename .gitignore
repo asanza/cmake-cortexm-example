@@ -1,0 +1,4 @@
+build
+.vscode
+.cortex-debug*
+settings.json
