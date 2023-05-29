@@ -24,7 +24,7 @@
             "type": "cortex-debug",
             "runToEntryPoint": "Reset_Handler",
             "servertype": "qemu",
-            "machine": "stm32vldiscovery"
+            "machine": "netduino2"
         },
     ]
 }

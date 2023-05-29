@@ -21,7 +21,7 @@ set(TARGET test_example)
         -lc
     )
     target_link_libraries(${TARGET} PRIVATE unity)
-    add_test(NAME ${TARGET} COMMAND ${Python_EXECUTABLE} ${CMAKE_CURRENT_LIST_DIR}/support/qemu-test-fixture.py ${TARGET})
+    add_test(NAME ${TARGET} COMMAND ${Python_EXECUTABLE} ${CMAKE_CURRENT_LIST_DIR}/support/qemu-test-fixture.py -M netduino2 -cpu cortex-m3 ${TARGET})
 endmacro()
 
 add_unit_test(test_example ${CMAKE_CURRENT_LIST_DIR}/test_example.c)
