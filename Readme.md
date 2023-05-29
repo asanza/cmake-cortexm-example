@@ -49,3 +49,4 @@ The cubeMX was used to generate the low driver code. We compile this into a libr
 the application board.
 
 The unit tests use the Unity unit test framework and qemu to run.
+

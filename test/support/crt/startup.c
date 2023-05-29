@@ -234,7 +234,7 @@ fault_handler_c(unsigned int *stack)
     printf("LR   : 0x%08X\n", stack[5]);
     printf("PC   : 0x%08X\n", stack[6]);
     printf("XPSR : 0x%08X\n", stack[7]);
-    printf("CFSR : 0x%08X\n", *cfsr);
+    printf("CFSR : 0x%08lX\n", *cfsr);
     if (*bfsr & (1 << 7)) {
         printf("BFAR : 0x%08X\n", *bfar);
     }
@@ -301,7 +301,7 @@ Default_Handler(void)
      * handler. Read the active interrupt number bellow.
      */
     volatile __unused uint32_t vector = *REGADDR(ICSR) & 0xFFU;
-    sprintf(buf, "Default Handler called for vector: %d (%s)", vector, vector_name(vector));
+    sprintf(buf, "Default Handler called for vector: %ld (%s)", vector, vector_name(vector));
     UNITY_TEST_FAIL(0, buf);
     exit(0);
 }
