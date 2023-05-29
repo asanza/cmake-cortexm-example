@@ -12,7 +12,7 @@ target_include_directories(${TARGET} INTERFACE
 
 
 # Hal stm Library
-set(TARGET vendor_stm32f411xE)
+set(TARGET vendor_stm32f411xe)
 
 set(STM32_HAL ${CMAKE_CURRENT_LIST_DIR}/Drivers/STM32F4xx_HAL_Driver)
 

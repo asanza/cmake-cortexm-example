@@ -1,0 +1,6 @@
+#ifndef F72EED83_8FC8_40F5_9F5D_44C01C2441EA
+#define F72EED83_8FC8_40F5_9F5D_44C01C2441EA
+
+#define HAL_ASSERT(x) if(!(x)) { asm volatile("bkpt"); for(;;); }
+
+#endif /* F72EED83_8FC8_40F5_9F5D_44C01C2441EA */
